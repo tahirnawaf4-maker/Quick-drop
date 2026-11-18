@@ -4,6 +4,7 @@ import 'package:quick_drop/core/theme/app_theme.dart';
 import 'package:quick_drop/features/auth/presentation/screens/home_screen.dart';
 import 'package:quick_drop/features/auth/presentation/screens/login_screen.dart';
 import 'package:quick_drop/features/auth/presentation/screens/splash_screen.dart';
+import 'package:quick_drop/features/cart/presentation/screens/cart_screen.dart';
 import 'package:quick_drop/features/home/presentation/screens/store_details_screens.dart';
 
 void main() {
@@ -24,7 +25,7 @@ class QuickDrop extends StatelessWidget {
       builder: (context, child) {
         return Directionality(textDirection: TextDirection.rtl, child: child!);
       },
-      home: StoreDetailsScreens(),
+      home: const CartScreen(),
     );
   }
 }
