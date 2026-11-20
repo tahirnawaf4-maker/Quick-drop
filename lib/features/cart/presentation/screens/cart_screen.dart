@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:quick_drop/core/constants/app_colors.dart';
+import 'package:quick_drop/features/checkout/presentation/screens/checkout_screen.dart';
 
 class CartScreen extends StatefulWidget {
   const CartScreen({super.key});
@@ -176,6 +177,15 @@ class _CartScreenState extends State<CartScreen> {
                           width: double.infinity,
                           child: ElevatedButton(
                             onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => CheckoutScreen(
+                                    subtotal: _subtotal,
+                                    deliveryFee: _deliveryFee,
+                                  ),
+                                ),
+                              );
                               // Handle checkout action
                             },
                             style: ElevatedButton.styleFrom(
